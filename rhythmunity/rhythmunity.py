@@ -122,19 +122,22 @@ if __name__ == '__main__':
 #1- Load All Members
 	#1-1 Load JSON file
 	print "-" * 80
-	print "Load the Json file: MembersSchedule.json\n"
+	print "Load the Json file: MembersSchedule.json"
 	data = loadJSON('memberschedule.json')
 	#1-2 Initialize Members
 	print "Loading members: instance, schedule, and members list...\n"
 	members = loadsMembers(data)
+	'''
 	#1-3 Print Each Member's schedule
 	print "Print Each Member's schedule"
 	for member in members:
 		print member.fullname
 		printschedule(member.schedule)
 	print "-" * 80
+	'''
 	#1-4 Generate the General Schedule
 	schedule = generalSchedule(members)
+	print "The General Schedule: "
 	printschedule(schedule)
 	print "-" * 80
 
@@ -142,7 +145,7 @@ if __name__ == '__main__':
 #2- Load Bands
 	#2-1 Load JSON file
 	print "Load the Json file: Bands.json"
-	data = loadJSON('Bands.json')
+	data = loadJSON('bands.json')
 	#2-2 Initialize Bands
 	print "Loading bands: instance, schedule, and members list...\n"
 	bands = loadsBands(data)
@@ -154,9 +157,7 @@ if __name__ == '__main__':
 			print "\t" + member.fullname
 			printschedule(member.schedule)
 	print "-" * 80
-	'''
-	
-	
+	'''	
 	#2-4 Generate Band Schedule based on members schedules
 	bandsSchedule(bands)
 	#2-5 Print each band's schedule

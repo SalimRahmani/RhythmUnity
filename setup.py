@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "rhythmunity",
-    version = "0.1.0",
+    version = "0.2.0",
     author = "Salim Rahmani",
     author_email = "SalimRahmani@outlook.com",
     description = ("Application to generate Rehearsals schedule"

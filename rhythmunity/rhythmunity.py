@@ -1,6 +1,8 @@
 from __future__ import print_function
+
 import json
 from datetime import datetime
+
 from model import *
 
 __author__ = 'Salim Rahmani'
@@ -132,8 +134,8 @@ if __name__ == '__main__':
     schedule = get_general_schedule(members)
     print("The General Schedule: ")
     print_schedule(schedule)
-    print("-" * 80)
 
+    print("-" * 80)
     print("Load the Json file: Bands.json")
     data = load_json('bands.json')
     bands = load_bands(data)

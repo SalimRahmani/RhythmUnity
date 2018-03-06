@@ -136,7 +136,6 @@ if __name__ == '__main__':
 
     print("Load the Json file: Bands.json")
     data = load_json('bands.json')
-    print("Loading bands: instance, schedule, and members list...\n")
     bands = load_bands(data)
 
     get_bands_schedule(bands)

@@ -129,7 +129,6 @@ if __name__ == '__main__':
     data = load_json('memberschedule.json')
     members = load_members(data)
 
-    # 1-4 Generate the General Schedule
     schedule = get_general_schedule(members)
     print("The General Schedule: ")
     print_schedule(schedule)
@@ -140,7 +139,6 @@ if __name__ == '__main__':
     print("Loading bands: instance, schedule, and members list...\n")
     bands = load_bands(data)
 
-    # 2-4 Generate Band Schedule based on members schedules
     get_bands_schedule(bands)
 
     for band in bands:

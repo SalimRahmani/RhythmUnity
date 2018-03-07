@@ -76,11 +76,10 @@ def check_schedule(sched):
     return sched
 
 
-def get_bands_schedule(bands):
-    for band in bands:
-        bandSchedule = {"Monday": [], "Tuesday": [], "Wednesday": [], "Thursday": []}
-        bandSchedule = get_general_schedule(band.members)
-        band.setSchedule(bandSchedule)
+def get_band_schedule(band):
+    bandSchedule = {"Monday": [], "Tuesday": [], "Wednesday": [], "Thursday": []}
+    bandSchedule = get_general_schedule(band.members)
+    band.setSchedule(bandSchedule)
 
 
 def print_schedule(sched):
@@ -132,6 +131,7 @@ if __name__ == '__main__':
     members = load_members(data)
 
     schedule = get_general_schedule(members)
+
     print("The General Schedule: ")
     print_schedule(schedule)
 
@@ -140,7 +140,8 @@ if __name__ == '__main__':
     data = load_json('bands.json')
     bands = load_bands(data)
 
-    get_bands_schedule(bands)
+    for band in bands:
+        get_band_schedule(band)
 
     for band in bands:
         print(band.name)
